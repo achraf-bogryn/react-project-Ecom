@@ -1,5 +1,6 @@
-import CategoryItem from './components/category-item/category-item.component';
-import './styles/categories.styles.scss'
+import CategoryContainer from './components/categoey-container/category-container.component';
+// import CategoryItem from './components/category-item/category-item.component';
+
 
 const App = () => {
  const categories =[
@@ -32,14 +33,16 @@ const App = () => {
 
  
   return (
-    <div className='categories-container'>
-    {categories.map((categorie)=>{
-    return(
-     <CategoryItem  key={categorie.id} category={categorie}/>
-    );
-    })}
+
+  <CategoryContainer categories={categories}/>
+    // <div className='categories-container'>
+    // {categories.map((categorie)=>{
+    // return(
+    //  <CategoryItem  key={categorie.id} category={categorie}/>
+    // );
+    // })}
  
-    </div>
+    // </div>
   );
 };
 
